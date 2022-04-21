@@ -21,9 +21,11 @@ namespace MethodsHomework
 
             YourAnswers.DoNothing();
 
+            
             int shouldBe25 = YourAnswers.ReturnIntWithValue25();
             Grading.ReturnIntWithValue25(shouldBe25);
-
+                    
+         
             int shouldBeAdded = YourAnswers.AddTwoNumbers(6, 10);
             Grading.AddTwoNumbers(shouldBeAdded);
 
@@ -32,7 +34,7 @@ namespace MethodsHomework
             Grading.IncrementMe(incremented);
 
             int valueToBeDecremented = 6;
-            int decremented = YourAnswers.DecrementMe(valueToBeDecremented);
+            int decremented = YourAnswers.IncrementMe(valueToBeDecremented);
             Grading.DecrementMe(decremented);
 
             double valueToBeCasted = 27.6;
@@ -164,9 +166,87 @@ namespace MethodsHomework
 
     public class YourAnswers
     {
+        internal static int AddTwoNumbers(int v1, int v2)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static int CastDoubleToInt(double valueToBeCasted)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static string CastMeIntoAString(double valueToBeCastedIntoString)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static bool CheckAllValuesAre3(int[] array4)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static bool CheckIfIAmTrue(bool v)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static double ConvertIntToDouble(int valueToBeConverted)
+        {
+            throw new NotImplementedException();
+        }
+
         //READ ME
         // You write all your methods here.
-        
+        internal static void DoNothing()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static int GetLengthOfArray(int[] array3)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static int GetThirdValue(int[] array3)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static int IncrementMe(int valueToBeIncremented)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static double ParseMeIntoADouble(string valueToBeParsed)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static int ReturnIntWithValue25()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static int ReturnMaxIntValue()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static bool ReturnTrueOnlyIfIamBothPositiveAndEven(int positiveAndEven)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static int SumTheContentsOfTheArray(int[] array)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static int[] SwapFirstValueWithLastValue(int[] array3)
+        {
+            throw new NotImplementedException();
+        }
     }
 
 
