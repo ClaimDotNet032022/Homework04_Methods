@@ -18,14 +18,11 @@ namespace MethodsHomework
             // You are NOT allowed to change any code in here at all. 
             // You are only allowed to write methods in the YourAnswers class below.
 
-
             YourAnswers.DoNothing();
 
-            
             int shouldBe25 = YourAnswers.ReturnIntWithValue25();
             Grading.ReturnIntWithValue25(shouldBe25);
-                    
-         
+
             int shouldBeAdded = YourAnswers.AddTwoNumbers(6, 10);
             Grading.AddTwoNumbers(shouldBeAdded);
 
@@ -34,7 +31,7 @@ namespace MethodsHomework
             Grading.IncrementMe(incremented);
 
             int valueToBeDecremented = 6;
-            int decremented = YourAnswers.IncrementMe(valueToBeDecremented);
+            int decremented = YourAnswers.DecrementMe(valueToBeDecremented);
             Grading.DecrementMe(decremented);
 
             double valueToBeCasted = 27.6;
@@ -107,151 +104,180 @@ namespace MethodsHomework
             // seen before but need to use.
             // In this section you are allowed to add code that calls the necessary methods, but
             // do NOT change any of the existing code.
+
             List<int> ages = new List<int> { 15, 27, 43, 12, 19, 51 };
 
             // Find a method to reverse this list of ages.
             // hint, uses the dot operatore on ages. like ages.SomeMethod()
-            
+
+            ages.Reverse();
+
             Grading.ListIsReversed(ages);
 
             // find a method to add a value to the list ages at the end.
             int addMeIntoList = 12;
-            
+            ages.Add(addMeIntoList);
+
             Grading.TwelveWasAdded(ages);
 
             // find a method to add a value to the list at the front of the list ages, ie, the start of it, or first value.
             int addMeToTheListAtTheVeryFront = 1;
-            
+            ages.Insert(0, addMeToTheListAtTheVeryFront);
             Grading.OneWasAddedToTheFront(ages);
 
             // find a method to clear the list ages.
-            
+            ages.Clear();
             Grading.AgesIsNowEmpty(ages);
 
             // find a method to check if the double amount is negative.
 
             double amount = 29.3;
+
             // you must capture the result of the found method;
-            bool isNegative = /*Answer here*/;
+            bool isNegative = double.IsNegative(amount);
             Grading.AmountIsNotNegative(isNegative);
 
             // Find a method to tell you if the sentence contains the work fox
             string sentence = "The quick brown fox.";
+
             // you must capture the result of the found method;
-            bool doesContaintFox = /*Answer here*/;
+            bool doesContaintFox = sentence.Contains("fox");
             Grading.ContainsFox(doesContaintFox);
 
             // Find a method to replace the word quick, with the word slow
             // you must capture the result of the found method;
-            sentence.Replace("quick", "slow");
-            string newSentence = /*Answer here*/;
+
+            string newSentence = sentence.Replace("quick", "slow");
             Grading.ReplacedTheWord(newSentence);
 
             // Find a method to Convert this word to lowercase;
             string word = "UPPER";
             // you must capture the result of the found method;
-            string lowered = /*Answer here*/;
+            string lowered = word.ToLower();
             Grading.StringWasLowercased(lowered);
 
             // Find a method to Convert this word to lowercase;
             string needsSplit = "I,Need,These,Separate";
+
             // you must capture the result of the found method;
-            string[] split = /*Answer here*/;
+            string[] split = needsSplit.Split(",");
             Grading.StringWasSplit(split);
 
-
-            // I hope by now you see the power of what the types already do for you.
+               // I hope by now you see the power of what the types already do for you.
         }
     }
 
     public class YourAnswers
     {
-        internal static int AddTwoNumbers(int v1, int v2)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal static int CastDoubleToInt(double valueToBeCasted)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal static string CastMeIntoAString(double valueToBeCastedIntoString)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal static bool CheckAllValuesAre3(int[] array4)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal static bool CheckIfIAmTrue(bool v)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal static double ConvertIntToDouble(int valueToBeConverted)
-        {
-            throw new NotImplementedException();
-        }
-
         //READ ME
         // You write all your methods here.
-        internal static void DoNothing()
+
+        public static void DoNothing() { }
+
+        public static int ReturnIntWithValue25() { return 25; }
+
+        public static int AddTwoNumbers(int x, int y)
         {
-            throw new NotImplementedException();
+            return x + y;
         }
 
-        internal static int GetLengthOfArray(int[] array3)
+        public static int IncrementMe(int valueToBeIncremented)
         {
-            throw new NotImplementedException();
+            int Incremented = ++valueToBeIncremented;
+            return Incremented;
         }
 
-        internal static int GetThirdValue(int[] array3)
+        public static int DecrementMe(int valueToBeDecremented)
         {
-            throw new NotImplementedException();
+            int Decremented = --valueToBeDecremented;
+            return Decremented;
         }
 
-        internal static int IncrementMe(int valueToBeIncremented)
+        public static int CastDoubleToInt(double valueToBeCasted)
         {
-            throw new NotImplementedException();
+            int casted = ((int)(valueToBeCasted));
+            return casted;
         }
 
-        internal static double ParseMeIntoADouble(string valueToBeParsed)
+        public static double ConvertIntToDouble(int valueToBeConverted)
         {
-            throw new NotImplementedException();
+            return Convert.ToDouble(valueToBeConverted);
         }
 
-        internal static int ReturnIntWithValue25()
+        public static string CastMeIntoAString(double valueToBeCastedIntoString)
         {
-            throw new NotImplementedException();
+            string castedString = valueToBeCastedIntoString.ToString();
+            return castedString;
         }
 
-        internal static int ReturnMaxIntValue()
+        public static double ParseMeIntoADouble(string valueToBeParsed)
         {
-            throw new NotImplementedException();
+            double parsed = Convert.ToDouble(valueToBeParsed);
+            return parsed;
         }
 
-        internal static bool ReturnTrueOnlyIfIamBothPositiveAndEven(int positiveAndEven)
+        public static int ReturnMaxIntValue(int max = 2147483647)
         {
-            throw new NotImplementedException();
+            return max;
         }
 
-        internal static int SumTheContentsOfTheArray(int[] array)
+        public static bool CheckIfIAmTrue(bool amITrue)
         {
-            throw new NotImplementedException();
+            return amITrue;
         }
 
-        internal static int[] SwapFirstValueWithLastValue(int[] array3)
+        public static bool ReturnTrueOnlyIfIamBothPositiveAndEven(int positiveAndEven)
         {
-            throw new NotImplementedException();
+            if (positiveAndEven > 0 && positiveAndEven % 2 == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
+
+        public static int SumTheContentsOfTheArray(int[] array)
+        {
+            return array.Sum();
+        }
+
+        public static int GetThirdValue(int[] array3)
+        {
+            return array3[2];
+        }
+
+        public static int GetLengthOfArray(int[] array3)
+        {
+            return array3.Length;
+        }
+
+        public static bool CheckAllValuesAre3(int[] array4)
+        {
+            foreach (int value in array4)
+            {
+                if (value != 3)
+                {
+                    return false;
+                }
+
+            }
+            return true;
+        }
+
+        public static int[] SwapFirstValueWithLastValue(int[] array3)
+        {
+            int x = array3[0];
+            int y = array3[5];
+            array3[0] = y;
+            array3[5] = x;
+            return array3;
+        }
+
+
     }
-
-
-
-
 
 
     public class Grading
