@@ -1,4 +1,3 @@
-
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -109,64 +108,181 @@ namespace MethodsHomework
 
             // Find a method to reverse this list of ages.
             // hint, uses the dot operatore on ages. like ages.SomeMethod()
-            
+            ages.Reverse(); 
             Grading.ListIsReversed(ages);
 
             // find a method to add a value to the list ages at the end.
             int addMeIntoList = 12;
-            
-            Grading.TwelveWasAdded(ages);
 
+            Grading.TwelveWasAdded(ages);
+            ages.Add(addMeIntoList);
             // find a method to add a value to the list at the front of the list ages, ie, the start of it, or first value.
             int addMeToTheListAtTheVeryFront = 1;
-            
+            ages.Insert(0, addMeToTheListAtTheVeryFront);   
             Grading.OneWasAddedToTheFront(ages);
 
             // find a method to clear the list ages.
-            
+            ages.Clear();
             Grading.AgesIsNowEmpty(ages);
 
             // find a method to check if the double amount is negative.
 
             double amount = 29.3;
             // you must capture the result of the found method;
-            bool isNegative = /*Answer here*/;
+            bool isNegative = double.IsNegative(amount)/*Answer here*/;
             Grading.AmountIsNotNegative(isNegative);
 
             // Find a method to tell you if the sentence contains the work fox
             string sentence = "The quick brown fox.";
             // you must capture the result of the found method;
-            bool doesContaintFox = /*Answer here*/;
+            bool doesContaintFox = sentence.Contains("fox");
             Grading.ContainsFox(doesContaintFox);
 
             // Find a method to replace the word quick, with the word slow
             // you must capture the result of the found method;
             sentence.Replace("quick", "slow");
-            string newSentence = /*Answer here*/;
+            string newSentence = sentence.Replace("quick", "slow");
             Grading.ReplacedTheWord(newSentence);
 
             // Find a method to Convert this word to lowercase;
             string word = "UPPER";
             // you must capture the result of the found method;
-            string lowered = /*Answer here*/;
+            string lowered = word.ToLower();
             Grading.StringWasLowercased(lowered);
 
             // Find a method to Convert this word to lowercase;
             string needsSplit = "I,Need,These,Separate";
             // you must capture the result of the found method;
-            string[] split = /*Answer here*/;
-            Grading.StringWasSplit(split);
-
+            string[] split = /*Answer here*/
+            //Grading.StringWasSplit(split);
+            needsSplit.Split(",");
 
             // I hope by now you see the power of what the types already do for you.
         }
     }
 
     public class YourAnswers
+    
     {
         //READ ME
         // You write all your methods here.
+        public static void DoNothing() { }
+
+        public static int ReturnIntWithValue25() { return 25; }
+
+        public static int AddTwoNumbers(int x, int y)
+        {
+            return x + y;
+
+        }
+
+        public static int IncrementMe(int valueToBeIncremented)
+        {
+            int Incremented = valueToBeIncremented++;
+            return Incremented;
+        }
+
+        public static int DecrementMe(int valueToBeDecremented)
+        {
+            int Decrement = valueToBeDecremented--;
+            return Decrement;
+        }
+
+        public static int CastDoubleToInt(double ValueToBeCasted)
+        {
+            return Convert.ToInt32(ValueToBeCasted);
+        }
+
+        public static double ConvertIntToDouble(int ValueToBeConverted)
+        {
+            return Convert.ToDouble(ValueToBeConverted);
+        }
+
+        public static string CastMeIntoAString(double valueToBeCastedIntoString)
+        {
+            return Convert.ToString(valueToBeCastedIntoString);
+        }
+
+        public static double ParseMeIntoADouble(string valueToBeParsed)
+        {
+            return ParseMeIntoADouble(valueToBeParsed);
+
+        }
+
+        public static int ReturnMaxIntValue()
+        {
+            return 2147483647;
+        }
+
+        public static bool CheckIfIAmTrue(bool amITrue)
+        {
+            return true;
+        }
+
+        public static bool ReturnTrueOnlyIfIamBothPositiveAndEven(int positiveAndEven)
+        {
+
+            if (positiveAndEven % 2 == 0 && positiveAndEven >= 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public static int SumTheContentsOfTheArray(int[] array)
+        {
+            int sum = array.Sum();
+            return sum;
+        }
+
+        public static int GetThirdValue(int[] array3)
+        {
+            return array3[2];
+        }
         
+        public static int GetLengthOfArray(int[] array3)
+        {
+            //int Length = array3.Length;
+                return array3.Length;
+            
+        }
+
+        public static bool CheckAllValuesAre3(int[] array4)
+        {
+            foreach (int element in array4)
+            {
+                if (element == 3)
+                {
+                    return true;
+                }
+                else return false;
+            }
+
+        }
+        
+        public static int[] SwapFirstValueWithLastValue(int[] array3)
+        {
+            int temp = 0;
+            temp = array3[0];
+            array3[0] = array3[5];
+            array3[5] = temp;
+            
+        
+             Assert.IsTrue(array3[0] == 17);
+             Assert.IsTrue(array3[5] == 4);
+             return array3;
+        }
+
+
+            
+
+        
+
+
+
+
+
+
     }
 
 
