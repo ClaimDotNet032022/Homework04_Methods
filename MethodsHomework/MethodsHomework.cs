@@ -249,15 +249,18 @@ namespace MethodsHomework
 
         public static bool CheckAllValuesAre3(int[] array4)
         {
-            foreach (int element in array4)
+            int n = 0;
+            while (true)
             {
-                if (element == 3)
-                {
-                    return true;
-                }
-                else return false;
-            }
+                ++n;
 
+                if (n == 3 && n < array4.Length)
+                {
+                    continue;
+                }
+
+                Console.WriteLine(n);
+            }
         }
         
         public static int[] SwapFirstValueWithLastValue(int[] array3)
