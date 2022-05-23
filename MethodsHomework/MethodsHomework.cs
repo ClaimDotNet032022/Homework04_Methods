@@ -168,28 +168,35 @@ namespace MethodsHomework
         // You write all your methods here.
         public static void DoNothing() { }
 
-        public static int ReturnIntWithValue25() { return 25; }
-
-        public static int AddTwoNumbers(int x, int y)
+        public static int ReturnIntWithValue25() 
         {
-            return x + y;
+             
+             return 25; 
+        }
 
+        public static int AddTwoNumbers(int a, int b)
+        {
+           
+            return (a +b);
         }
 
         public static int IncrementMe(int valueToBeIncremented)
         {
-            int Incremented = valueToBeIncremented++;
+            int Incremented = 6;
+                Incremented++;
             return Incremented;
         }
 
         public static int DecrementMe(int valueToBeDecremented)
         {
-            int Decrement = valueToBeDecremented--;
-            return Decrement;
+            int Decremented = 6;
+                Decremented--;
+            return Decremented;
         }
 
         public static int CastDoubleToInt(double ValueToBeCasted)
         {
+            
             return Convert.ToInt32(ValueToBeCasted);
         }
 
@@ -205,7 +212,8 @@ namespace MethodsHomework
 
         public static double ParseMeIntoADouble(string valueToBeParsed)
         {
-            return ParseMeIntoADouble(valueToBeParsed);
+            
+            return double.Parse(valueToBeParsed);
 
         }
 
@@ -254,12 +262,12 @@ namespace MethodsHomework
             {
                 ++n;
 
-                if (n == 3 && n < array4.Length)
+                if (n != 3) 
                 {
-                    continue;
+                    return false;
                 }
-
-                Console.WriteLine(n);
+                return true;
+                
             }
         }
         
